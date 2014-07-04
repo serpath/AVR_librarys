@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "MIDI_1", "MIDI_1\MIDI_1.cproj", "{A09083D4-6D11-447D-B6CE-11EB3D8C7C29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A09083D4-6D11-447D-B6CE-11EB3D8C7C29}.Debug|AVR.ActiveCfg = Debug|AVR
+		{A09083D4-6D11-447D-B6CE-11EB3D8C7C29}.Debug|AVR.Build.0 = Debug|AVR
+		{A09083D4-6D11-447D-B6CE-11EB3D8C7C29}.Release|AVR.ActiveCfg = Release|AVR
+		{A09083D4-6D11-447D-B6CE-11EB3D8C7C29}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

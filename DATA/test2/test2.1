@@ -1,0 +1,64 @@
+#define F_CPU 8000000UL
+#include <avr/io.h>
+#include <util/delay.h>
+
+
+
+
+
+int main()
+{
+	DDRB |= (1<<PB0)|(1<<PB4);
+	DDRD = 0b11111111;
+	
+	//char a ;
+	char b = 0b00000101;
+	char s = 0b01000100;
+	char i = 0b00000001;
+	char z = 0;
+		
+		
+		while(1)
+		{
+				//for (int k =0;k<100;k++){}
+			
+			if( i & b)
+			{
+			
+			PORTB |= (1<<PB0);
+			for (int k =0;k<100;k++){}
+			PORTB ^= (1<<PB0);
+			for (int k =0;k<100;k++){}
+			PORTB &= ~(1<<PB0);
+			}
+			else
+			{
+			PORTB &= ~ (1<<PB0);
+			}
+				
+				if( i & s)
+				{
+				PORTB |= (1<<PB4);
+				for (int k =0;k<100;k++){}
+				PORTB &= ~(1<<PB4);
+				}
+				else
+				{
+				PORTB &= ~ (1<<PB4);
+				}
+
+			z++;
+			if(z>7){z=0;}
+
+			PORTD ^= 1<<z;
+			for (int k =0;k<100;k++){}
+			PORTD ^= 1<<z;
+
+			
+			i = i << 1;
+			if(i == 0b10000000){i=0x01;}
+		}
+
+
+
+}
