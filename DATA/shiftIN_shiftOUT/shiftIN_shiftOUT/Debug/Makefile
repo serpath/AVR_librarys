@@ -36,6 +36,7 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../LCD.c \
 ../pinInt.c \
 ../shiftIN_shiftOUT.c \
 ../SPI_init.c \
@@ -49,24 +50,28 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+LCD.o \
 pinInt.o \
 shiftIN_shiftOUT.o \
 SPI_init.o \
 Timer.o
 
 OBJS_AS_ARGS +=  \
+LCD.o \
 pinInt.o \
 shiftIN_shiftOUT.o \
 SPI_init.o \
 Timer.o
 
 C_DEPS +=  \
+LCD.d \
 pinInt.d \
 shiftIN_shiftOUT.d \
 SPI_init.d \
 Timer.d
 
 C_DEPS_AS_ARGS +=  \
+LCD.d \
 pinInt.d \
 shiftIN_shiftOUT.d \
 SPI_init.d \
@@ -83,6 +88,8 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 LIB_DEP+= 
 
 # AVR32/GNU C Compiler
+
+
 
 
 
@@ -124,7 +131,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP)
 	@echo Building target: $@
 	@echo Invoking: AVR/GNU Linker : 4.8.1
-	$(QUOTE)C:\Program Files\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="shiftIN_shiftOUT.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega168p  
+	$(QUOTE)C:\Program Files\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="shiftIN_shiftOUT.map" -Wl,--start-group  -Wl,--end-group -Wl,-L"D:\[dokumente]\GITHUB\DATA\shiftIN_shiftOUT\shiftIN_shiftOUT"  -Wl,--gc-sections -mmcu=atmega168p  
 	@echo Finished building target: $@
 	"C:\Program Files\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "shiftIN_shiftOUT.elf" "shiftIN_shiftOUT.hex"
 	"C:\Program Files\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "shiftIN_shiftOUT.elf" "shiftIN_shiftOUT.eep" || exit 0

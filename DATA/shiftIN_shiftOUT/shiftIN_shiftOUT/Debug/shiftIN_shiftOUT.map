@@ -5,17 +5,28 @@ c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolcha
 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
                               c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm168p.o (exit)
 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
-                              shiftIN_shiftOUT.o (__do_copy_data)
+                              LCD.o (__do_copy_data)
 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_clear_bss.o)
                               shiftIN_shiftOUT.o (__do_clear_bss)
+c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+                              shiftIN_shiftOUT.o (__itoa_ncheck)
+c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+                              c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o) (__utoa_common)
+c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o) (strrev)
 
 Discarded input sections
 
  .bss           0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm168p.o
+ .text          0x00000000        0x0 LCD.o
+ .bss           0x00000000        0x0 LCD.o
+ .data.program_date
+                0x00000000        0xd LCD.o
  .text          0x00000000        0x0 pinInt.o
  .bss           0x00000000        0x0 pinInt.o
  .text          0x00000000        0x0 shiftIN_shiftOUT.o
  .bss           0x00000000        0x0 shiftIN_shiftOUT.o
+ .data.MENU     0x00000000        0xa shiftIN_shiftOUT.o
  .text          0x00000000        0x0 SPI_init.o
  .bss           0x00000000        0x0 SPI_init.o
  .text          0x00000000        0x0 Timer.o
@@ -78,6 +89,12 @@ Discarded input sections
                 0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+ .bss           0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+ .text          0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+ .bss           0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+ .text          0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .bss           0x00000000        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
 
 Memory Configuration
 
@@ -95,12 +112,12 @@ Linker script and memory map
 
 Address of section .data set to 0x800100
 LOAD c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm168p.o
+LOAD LCD.o
 LOAD pinInt.o
 LOAD shiftIN_shiftOUT.o
 LOAD SPI_init.o
 LOAD Timer.o
 START GROUP
-LOAD c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a
 END GROUP
 START GROUP
 LOAD c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a
@@ -198,7 +215,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x382
+.text           0x00000000      0x7b0
  *(.vectors)
  .vectors       0x00000000       0x68 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm168p.o
                 0x00000000                __vector_default
@@ -256,7 +273,6 @@ END GROUP
  *(.text)
  .text          0x000000a2        0x4 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm168p.o
                 0x000000a2                __vector_22
-                0x000000a2                __vector_1
                 0x000000a2                __vector_24
                 0x000000a2                __vector_12
                 0x000000a2                __bad_interrupt
@@ -281,38 +297,76 @@ END GROUP
                 0x000000a2                __vector_20
                 0x000000a6                . = ALIGN (0x2)
  *(.text.*)
- .text.pinInt   0x000000a6       0x18 pinInt.o
-                0x000000a6                pinInt
+ .text.lcd_write_4
+                0x000000a6       0x30 LCD.o
+                0x000000a6                lcd_write_4
+ .text.lcd_write_character_4d
+                0x000000d6       0x1a LCD.o
+                0x000000d6                lcd_write_character_4d
+ .text.lcd_write_string_4d
+                0x000000f0       0x5e LCD.o
+                0x000000f0                lcd_write_string_4d
+ .text.lcd_write_instruction_4d
+                0x0000014e       0x1a LCD.o
+                0x0000014e                lcd_write_instruction_4d
+ .text.lcd_init_4d
+                0x00000168       0xa6 LCD.o
+                0x00000168                lcd_init_4d
+ .text.LCD_LCD  0x0000020e       0x30 LCD.o
+                0x0000020e                LCD_LCD
+ .text.pinInt   0x0000023e       0x18 pinInt.o
+                0x0000023e                pinInt
+ .text.BLABLA   0x00000256       0x80 shiftIN_shiftOUT.o
+                0x00000256                BLABLA
+ .text.LCD_delete
+                0x000002d6       0x38 shiftIN_shiftOUT.o
+                0x000002d6                LCD_delete
+ .text.__vector_1
+                0x0000030e       0x5e shiftIN_shiftOUT.o
+                0x0000030e                __vector_1
  .text.BerechneCnt
-                0x000000be       0x22 shiftIN_shiftOUT.o
-                0x000000be                BerechneCnt
+                0x0000036c       0x22 shiftIN_shiftOUT.o
+                0x0000036c                BerechneCnt
  .text.__vector_4
-                0x000000e0       0xec shiftIN_shiftOUT.o
-                0x000000e0                __vector_4
- .text.SWITCH   0x000001cc       0x6a shiftIN_shiftOUT.o
-                0x000001cc                SWITCH
- .text.main     0x00000236       0x1a shiftIN_shiftOUT.o
-                0x00000236                main
+                0x0000038e       0xfa shiftIN_shiftOUT.o
+                0x0000038e                __vector_4
+ .text.DAC_send
+                0x00000488       0x34 shiftIN_shiftOUT.o
+                0x00000488                DAC_send
+ .text.SWITCH   0x000004bc       0x52 shiftIN_shiftOUT.o
+                0x000004bc                SWITCH
+ .text.main     0x0000050e       0x70 shiftIN_shiftOUT.o
+                0x0000050e                main
  .text.__vector_16
-                0x00000250       0x84 shiftIN_shiftOUT.o
-                0x00000250                __vector_16
+                0x0000057e      0x118 shiftIN_shiftOUT.o
+                0x0000057e                __vector_16
  .text.SPI_init
-                0x000002d4       0x18 SPI_init.o
-                0x000002d4                SPI_init
+                0x00000696       0x18 SPI_init.o
+                0x00000696                SPI_init
  .text.SPI_send
-                0x000002ec       0x3a SPI_init.o
-                0x000002ec                SPI_send
+                0x000006ae       0x3c SPI_init.o
+                0x000006ae                SPI_send
  .text.TIMER_init
-                0x00000326       0x14 Timer.o
-                0x00000326                TIMER_init
+                0x000006ea       0x14 Timer.o
+                0x000006ea                TIMER_init
  .text.libgcc.div
-                0x0000033a       0x44 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
-                0x0000033a                __udivmodsi4
-                0x0000037e                . = ALIGN (0x2)
+                0x000006fe       0x44 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006fe                __udivmodsi4
+ .text.avr-libc
+                0x00000742       0x16 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+                0x00000742                __itoa_ncheck
+ .text.avr-libc
+                0x00000758       0x34 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+                0x00000758                __utoa_ncheck
+                0x0000075a                __utoa_common
+ .text.avr-libc
+                0x0000078c       0x20 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x0000078c                strrev
+                0x000007ac                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000037e        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
-                0x0000037e                _exit
-                0x0000037e                exit
+ .fini9         0x000007ac        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+                0x000007ac                _exit
+                0x000007ac                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -331,14 +385,15 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000037e        0x4 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+ .fini0         0x000007ac        0x4 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000382                _etext = .
+                0x000007b0                _etext = .
 
-.data           0x00800100        0x4 load address 0x00000382
+.data           0x00800100       0x52 load address 0x000007b0
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm168p.o
+ .data          0x00800100        0x0 LCD.o
  .data          0x00800100        0x0 pinInt.o
  .data          0x00800100        0x0 shiftIN_shiftOUT.o
  .data          0x00800100        0x0 SPI_init.o
@@ -347,56 +402,84 @@ END GROUP
  .data          0x00800100        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  .data          0x00800100        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
  .data          0x00800100        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800100        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+ .data          0x00800100        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+ .data          0x00800100        0x0 c:/program files/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
  *(.data*)
- .data.a        0x00800100        0x1 shiftIN_shiftOUT.o
-                0x00800100                a
+ .data.program_version
+                0x00800100       0x11 LCD.o
+                0x00800100                program_version
+ .data.program_author
+                0x00800111       0x11 LCD.o
+                0x00800111                program_author
+ .data.BPM      0x00800122        0x4 shiftIN_shiftOUT.o
+                0x00800122                BPM
+ .data.PATTERN  0x00800126        0x8 shiftIN_shiftOUT.o
+                0x00800126                PATTERN
+ .data.CV_array_2
+                0x0080012e       0x10 shiftIN_shiftOUT.o
+                0x0080012e                CV_array_2
+ .data.CV_array_1
+                0x0080013e       0x10 shiftIN_shiftOUT.o
+                0x0080013e                CV_array_1
+ .data.a        0x0080014e        0x1 shiftIN_shiftOUT.o
+                0x0080014e                a
  .data.Drehwert
-                0x00800101        0x2 shiftIN_shiftOUT.o
-                0x00800101                Drehwert
+                0x0080014f        0x2 shiftIN_shiftOUT.o
+                0x0080014f                Drehwert
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x00800104                . = ALIGN (0x2)
- *fill*         0x00800103        0x1 
-                0x00800104                _edata = .
-                0x00800104                PROVIDE (__data_end, .)
+                0x00800152                . = ALIGN (0x2)
+ *fill*         0x00800151        0x1 
+                0x00800152                _edata = .
+                0x00800152                PROVIDE (__data_end, .)
 
-.bss            0x00800104        0xa
-                0x00800104                PROVIDE (__bss_start, .)
+.bss            0x00800152        0xe
+                0x00800152                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
+ .bss.active    0x00800152        0x1 shiftIN_shiftOUT.o
+                0x00800152                active
  .bss.BIT_checker
-                0x00800104        0x1 shiftIN_shiftOUT.o
-                0x00800104                BIT_checker
- .bss.PrevInput
-                0x00800105        0x1 shiftIN_shiftOUT.o
-                0x00800105                PrevInput
- .bss.cnt_MAX   0x00800106        0x2 shiftIN_shiftOUT.o
-                0x00800106                cnt_MAX
- .bss.cnt       0x00800108        0x2 shiftIN_shiftOUT.o
-                0x00800108                cnt
- .bss.TEMP_1    0x0080010a        0x1 shiftIN_shiftOUT.o
-                0x0080010a                TEMP_1
+                0x00800153        0x1 shiftIN_shiftOUT.o
+                0x00800153                BIT_checker
+ .bss.milo      0x00800154        0x1 shiftIN_shiftOUT.o
+                0x00800154                milo
+ .bss.PrevInput2
+                0x00800155        0x1 shiftIN_shiftOUT.o
+                0x00800155                PrevInput2
+ .bss.PrevInput1
+                0x00800156        0x1 shiftIN_shiftOUT.o
+                0x00800156                PrevInput1
+ .bss.cnt_MAX   0x00800157        0x2 shiftIN_shiftOUT.o
+                0x00800157                cnt_MAX
+ .bss.cnt       0x00800159        0x2 shiftIN_shiftOUT.o
+                0x00800159                cnt
+ .bss.TEMP_1    0x0080015b        0x1 shiftIN_shiftOUT.o
+                0x0080015b                TEMP_1
  .bss.SHIFT_buffer2
-                0x0080010b        0x1 shiftIN_shiftOUT.o
-                0x0080010b                SHIFT_buffer2
+                0x0080015c        0x1 shiftIN_shiftOUT.o
+                0x0080015c                SHIFT_buffer2
  .bss.SHIFT_buffer1
-                0x0080010c        0x1 shiftIN_shiftOUT.o
-                0x0080010c                SHIFT_buffer1
+                0x0080015d        0x1 shiftIN_shiftOUT.o
+                0x0080015d                SHIFT_buffer1
  .bss.Drehencoder
-                0x0080010d        0x1 shiftIN_shiftOUT.o
-                0x0080010d                Drehencoder
+                0x0080015e        0x1 shiftIN_shiftOUT.o
+                0x0080015e                Drehencoder
+ .bss.ON        0x0080015f        0x1 shiftIN_shiftOUT.o
+                0x0080015f                ON
  *(COMMON)
-                0x0080010e                PROVIDE (__bss_end, .)
-                0x00000382                __data_load_start = LOADADDR (.data)
-                0x00000386                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800160                PROVIDE (__bss_end, .)
+                0x000007b0                __data_load_start = LOADADDR (.data)
+                0x00000802                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080010e        0x0
-                0x0080010e                PROVIDE (__noinit_start, .)
+.noinit         0x00800160        0x0
+                0x00800160                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080010e                PROVIDE (__noinit_end, .)
-                0x0080010e                _end = .
-                0x0080010e                PROVIDE (__heap_start, .)
+                0x00800160                PROVIDE (__noinit_end, .)
+                0x00800160                _end = .
+                0x00800160                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -437,8 +520,9 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 pinInt.o
+ .comment       0x00000000       0x30 LCD.o
                                  0x31 (size before relaxing)
+ .comment       0x00000000       0x31 pinInt.o
  .comment       0x00000000       0x31 shiftIN_shiftOUT.o
  .comment       0x00000000       0x31 SPI_init.o
  .comment       0x00000000       0x31 Timer.o
@@ -458,63 +542,72 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xa8
+.debug_aranges  0x00000000      0x110
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x20 pinInt.o
+                0x00000000       0x48 LCD.o
  .debug_aranges
-                0x00000020       0x40 shiftIN_shiftOUT.o
+                0x00000048       0x20 pinInt.o
  .debug_aranges
-                0x00000060       0x28 SPI_init.o
+                0x00000068       0x60 shiftIN_shiftOUT.o
  .debug_aranges
-                0x00000088       0x20 Timer.o
+                0x000000c8       0x28 SPI_init.o
+ .debug_aranges
+                0x000000f0       0x20 Timer.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x41f
+.debug_info     0x00000000     0x113e
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000       0x82 pinInt.o
- .debug_info    0x00000082      0x25f shiftIN_shiftOUT.o
- .debug_info    0x000002e1       0xbc SPI_init.o
- .debug_info    0x0000039d       0x82 Timer.o
+ .debug_info    0x00000000      0x6de LCD.o
+ .debug_info    0x000006de       0x82 pinInt.o
+ .debug_info    0x00000760      0x895 shiftIN_shiftOUT.o
+ .debug_info    0x00000ff5       0xc7 SPI_init.o
+ .debug_info    0x000010bc       0x82 Timer.o
 
-.debug_abbrev   0x00000000      0x277
+.debug_abbrev   0x00000000      0x609
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0x4f pinInt.o
- .debug_abbrev  0x0000004f      0x15f shiftIN_shiftOUT.o
- .debug_abbrev  0x000001ae       0x7a SPI_init.o
- .debug_abbrev  0x00000228       0x4f Timer.o
+ .debug_abbrev  0x00000000      0x1fd LCD.o
+ .debug_abbrev  0x000001fd       0x4f pinInt.o
+ .debug_abbrev  0x0000024c      0x2e5 shiftIN_shiftOUT.o
+ .debug_abbrev  0x00000531       0x89 SPI_init.o
+ .debug_abbrev  0x000005ba       0x4f Timer.o
 
-.debug_line     0x00000000      0x3a7
+.debug_line     0x00000000      0x72a
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000       0xa8 pinInt.o
- .debug_line    0x000000a8      0x18f shiftIN_shiftOUT.o
- .debug_line    0x00000237       0xc9 SPI_init.o
- .debug_line    0x00000300       0xa7 Timer.o
+ .debug_line    0x00000000      0x224 LCD.o
+ .debug_line    0x00000224       0xa8 pinInt.o
+ .debug_line    0x000002cc      0x2e2 shiftIN_shiftOUT.o
+ .debug_line    0x000005ae       0xd5 SPI_init.o
+ .debug_line    0x00000683       0xa7 Timer.o
 
-.debug_frame    0x00000000      0x148
+.debug_frame    0x00000000      0x294
  *(.debug_frame)
- .debug_frame   0x00000000       0x24 pinInt.o
- .debug_frame   0x00000024       0xcc shiftIN_shiftOUT.o
- .debug_frame   0x000000f0       0x34 SPI_init.o
- .debug_frame   0x00000124       0x24 Timer.o
+ .debug_frame   0x00000000       0xa0 LCD.o
+ .debug_frame   0x000000a0       0x24 pinInt.o
+ .debug_frame   0x000000c4      0x178 shiftIN_shiftOUT.o
+ .debug_frame   0x0000023c       0x34 SPI_init.o
+ .debug_frame   0x00000270       0x24 Timer.o
 
-.debug_str      0x00000000      0x22e
+.debug_str      0x00000000      0x420
  *(.debug_str)
- .debug_str     0x00000000      0x130 pinInt.o
-                                0x164 (size before relaxing)
- .debug_str     0x00000130       0xd7 shiftIN_shiftOUT.o
-                                0x22d (size before relaxing)
- .debug_str     0x00000207       0x1a SPI_init.o
-                                0x17b (size before relaxing)
- .debug_str     0x00000221        0xd Timer.o
-                                0x167 (size before relaxing)
+ .debug_str     0x00000000      0x23a LCD.o
+                                0x26e (size before relaxing)
+ .debug_str     0x0000023a       0x15 pinInt.o
+                                0x15c (size before relaxing)
+ .debug_str     0x0000024f      0x1a3 shiftIN_shiftOUT.o
+                                0x384 (size before relaxing)
+ .debug_str     0x000003f2       0x21 SPI_init.o
+                                0x17a (size before relaxing)
+ .debug_str     0x00000413        0xd Timer.o
+                                0x15f (size before relaxing)
 
-.debug_loc      0x00000000      0x1e8
+.debug_loc      0x00000000      0x6c6
  *(.debug_loc)
- .debug_loc     0x00000000      0x19a shiftIN_shiftOUT.o
- .debug_loc     0x0000019a       0x4e SPI_init.o
+ .debug_loc     0x00000000      0x19b LCD.o
+ .debug_loc     0x0000019b      0x50c shiftIN_shiftOUT.o
+ .debug_loc     0x000006a7       0x1f SPI_init.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -534,12 +627,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x68
+.debug_ranges   0x00000000       0xc0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x10 pinInt.o
- .debug_ranges  0x00000010       0x30 shiftIN_shiftOUT.o
- .debug_ranges  0x00000040       0x18 SPI_init.o
- .debug_ranges  0x00000058       0x10 Timer.o
+ .debug_ranges  0x00000000       0x38 LCD.o
+ .debug_ranges  0x00000038       0x10 pinInt.o
+ .debug_ranges  0x00000048       0x50 shiftIN_shiftOUT.o
+ .debug_ranges  0x00000098       0x18 SPI_init.o
+ .debug_ranges  0x000000b0       0x10 Timer.o
 
 .debug_macro
  *(.debug_macro)

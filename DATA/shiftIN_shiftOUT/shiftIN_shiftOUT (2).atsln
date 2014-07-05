@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "shiftIN_shiftOUT", "shiftIN_shiftOUT\shiftIN_shiftOUT.cproj", "{968A4DFD-20A1-48C2-BBED-874679BE915C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{968A4DFD-20A1-48C2-BBED-874679BE915C}.Debug|AVR.ActiveCfg = Debug|AVR
+		{968A4DFD-20A1-48C2-BBED-874679BE915C}.Debug|AVR.Build.0 = Debug|AVR
+		{968A4DFD-20A1-48C2-BBED-874679BE915C}.Release|AVR.ActiveCfg = Release|AVR
+		{968A4DFD-20A1-48C2-BBED-874679BE915C}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

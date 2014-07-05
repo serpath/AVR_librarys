@@ -11,6 +11,8 @@
 
 
 void SPI_init(void);
+uint8_t SPI_send(uint8_t byte, uint8_t chip, uint8_t ENABLE);
+
 
 
 #endif /* INCFILE1_H_ */
